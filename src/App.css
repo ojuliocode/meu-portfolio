@@ -17,10 +17,19 @@
 }
 
 .card {
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 2px rgb(19, 19, 19);
+    border-radius: 30px;
+    
     max-width: 600px;
     padding: 10px;
+    background-color: hsl(0, 0%, 17%);
+    transition: 0.2s;
+    margin: 10px
+}
+
+.card:hover {
+    
+    transition: 0.2s;
+    box-shadow: 12px 12px 0px 2px rgb(236, 94, 5);
 }
 
 header {

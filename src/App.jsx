@@ -10,16 +10,20 @@ function App() {
     'https://github.com',
     'https://linkedin.com'
   ]
+  const [color, setColor] = useState('#FFFFFF');
+
   return (
     <div className='container' >
       <section
         className='card'
+        style={{boxShadow: `7px 7px 0px 1px ${color}`}}
       >
+        <input type='color' onChange={(e) => setColor(e.target.value)}/>
         <header>
           <img src={reactLogo} alt="" width={150} height={150} className='pfp' />
           <ul>
             <li>
-              <h3 className='name'>Seu nome</h3></li>
+              <h3 className='name'>Julio</h3></li>
             <li> <a
               href="https://www.github.com"
               target='_blank'
