@@ -11,12 +11,19 @@ function App() {
     'https://linkedin.com'
   ]
   const [color, setColor] = useState('#FFFFFF');
+  const [boxShadow, setBoxShadow] = useState(5)
 
   return (
     <div className='container' >
       <section
         className='card'
-        style={{boxShadow: `7px 7px 0px 1px ${color}`}}
+        style={{boxShadow: `${boxShadow}px ${boxShadow}px 0px 1px ${color}`}}
+        onMouseEnter={() => {
+          setBoxShadow(12)
+        }}
+        onMouseLeave={() => {
+          setBoxShadow(5)
+        }}
       >
         <input type='color' onChange={(e) => setColor(e.target.value)}/>
         <header>
