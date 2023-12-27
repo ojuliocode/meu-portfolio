@@ -11,7 +11,12 @@ function App() {
     'https://linkedin.com'
   ]
   const [color, setColor] = useState('#FFFFFF');
-  const [boxShadow, setBoxShadow] = useState(5)
+  const [boxShadow, setBoxShadow] = useState(5);
+  const [text, setSext] = useState(`Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
+  com foco em tecnologias como HTML, CSS e Javascript.
+  Também mexo com tecnologias devops, como AWS, Terraform e
+  Azure`);
+
 
   return (
     <div className='container' >
@@ -39,17 +44,12 @@ function App() {
           </ul>
         </header>
         <section>
-          <p className='unselectable'>
+          <p className='unselectable texto-principal'>
             Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
             com foco em tecnologias como HTML, CSS e Javascript.
             Também mexo com tecnologias devops, como AWS, Terraform e
             Azure
           </p>
-          <ul>
-            <li>
-
-            </li>
-          </ul>
         </section>
       </section>
     </div>
