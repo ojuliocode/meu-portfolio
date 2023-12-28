@@ -23,7 +23,8 @@
     padding: 10px;
     background-color: hsl(0, 0%, 17%);
     transition: 0.2s;
-    margin: 10px
+    margin: 10px;
+    position: relative;
 }
 
 .card:hover {
@@ -83,12 +84,4 @@ ul {
 
 li {
     margin: 3px
-}
-
-.texto-principal{
-    transition: 1s;
-}
-
-.texto-principal:hover{
-    transform: rotateY(180deg)
 }

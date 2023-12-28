@@ -2,7 +2,6 @@ import { useState } from 'react'
 import reactLogo from './assets/pic.png'
 import sun from './assets/sun.svg'
 import sundark from './assets/sundark.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -12,11 +11,11 @@ function App() {
   ]
   const [color, setColor] = useState('#FFFFFF');
   const [boxShadow, setBoxShadow] = useState(5);
-  const [text, setSext] = useState(`Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
+  const [text, setText] = useState(`Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
   com foco em tecnologias como HTML, CSS e Javascript.
   Também mexo com tecnologias devops, como AWS, Terraform e
   Azure`);
-
+const [opacity, setOpacity] = useState(1)
 
   return (
     <div className='container' >
@@ -44,12 +43,26 @@ function App() {
           </ul>
         </header>
         <section>
-          <p className='unselectable texto-principal'>
-            Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
-            com foco em tecnologias como HTML, CSS e Javascript.
-            Também mexo com tecnologias devops, como AWS, Terraform e
-            Azure
-          </p>
+          <p className='unselectable main-content' onMouseEnter={()=>{
+            setOpacity(0)
+            setTimeout(() => {
+              setOpacity(1)
+              setText(' Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ad aspernatur minus commodi. Ad quae, aliquid sapiente nisi doloremque maiores molestiae omnis dolor enim minus? Deleniti mollitia adipisci quibusdam deserunt.')
+            }, 200)
+            
+          }} onMouseLeave={() => {
+            
+            setOpacity(0)
+            setTimeout(() => {
+              setOpacity(1)
+              setText(`Olá! Este é o meu portfolio! Sou um desenvolvedor fullstack
+              com foco em tecnologias como HTML, CSS e Javascript.
+              Também mexo com tecnologias devops, como AWS, Terraform e
+              Azure`)
+            }, 200)
+            
+          }} style={{opacity: opacity, transition: '0.2s all'}}>
+            {text}</p>
         </section>
       </section>
     </div>
